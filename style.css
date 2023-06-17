@@ -1,0 +1,110 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --text: 1.5rem;
+    --head: calc(1rem + 5vw);
+    --bg-color: rgb(116, 82, 18);
+}
+
+body{
+    font-family: 'Dancing Script', cursive;
+font-family: 'Poppins', sans-serif;
+
+}
+
+.hero-section{
+    min-height: 100vh;
+    background:url(https://content3.jdmagicbox.com/comp/delhi/p7/011pxx11.xx11.181225211237.q2p7/catalogue/pizza-burgur-point-niti-vihar-delhi-burger-joints-seepzn8ej1.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center ;
+    position: relative;
+    z-index: 2;
+}
+
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 10vh;
+    padding: 0rem 1rem;
+    color: white;
+
+}
+
+.navbar ul{
+    list-style: none;
+}
+.navbar ul li {
+    display: inline-block;
+    margin-left: 3rem;
+    font-size: var(--text);
+}
+
+.navbar ul li a {
+text-decoration: none;
+color: white;
+border-bottom: 2px solid transparent;
+}
+
+.navbar ul li a:hover{
+    border-bottom: 2px solid  white;
+    }
+
+.hero-text {
+    color: white;
+    height: 90vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    animation: slide 2s ease-in-out;
+}
+
+@keyframes slide {
+    from{
+        transform: translateX(-100%);
+    }to{
+        transform: translateX(0%);
+    }
+    
+}
+
+.hero-text::before{
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: black;
+    z-index: -1;
+    top: 0;
+    opacity: 0.7;
+
+
+}
+
+.hero-text  a{
+    color: white;
+    background: var(--bg-color);
+    font-weight: 900;
+    font-size: var(--text);
+    padding: 0.8rem 1rem;
+    margin: 0.8rem auto;
+    display: block;
+    transition: opacity 250ms linear;
+}
+
+.hero-text a:hover {
+    opacity: 0.8;
+}
+
+.hero-text h2{
+    font-size: var(--head);
+}
+.hero-text p{
+    font-size: 3rem;
+}
